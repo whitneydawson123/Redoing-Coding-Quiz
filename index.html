@@ -4,31 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="assests/css/style.css">
+    <!-- Bootstrap Link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
     <title>Coding Quiz</title>
 </head>
 <body>
     <!-- Starting Page -->
-    <section class="starting">
+    <section class="starting col text-center p-4">
         <h1>Whitney's Coding Quiz</h1>
         <p>Try to answer the following code-related questions
             within the time limit. Keep in mind that incorrect answers
             will penalize your timer by ten seconds!
         </p>
-        <div class="startBtn"></div>
+        <div class="startBtn btn"></div>
     </section>
     <!-- End of Starting Page -->
-    
+    <div class="nextBtn btn"></div>
+
     <!-- End Page -->
     <section class="ending">
         <h1>All Done!</h1>
         <p class="score">Your Final Score is:</p>
         <p class="name">Enter First Name:</p>
-        <div class="saveScoreBtn"></div>
+        <div class="saveScoreBtn btn"></div>
+        <div class="viewScores btn"></div>
     </section>
     <!-- End of End Page -->
 
-
-    <script src="js/script.js"></script>
+    <!-- Javascript Links -->
+    <script src="assests/js/questions.js"></script>
+    <script src="assests/js/script.js"></script>
 </body>
 </html>
