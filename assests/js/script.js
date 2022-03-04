@@ -7,11 +7,13 @@ var showScore = document.getElementByClassName('.score');
 var enterName = document.getElementByClassName('.name');
 var saveScoreBtn = document.getElementByClassName('.saveScoreBtn');
 
-// start button function
-startBtn.addEventListener('click', function() {
-    
-});
+// other variables
 
+
+// start button function
+startBtn.onclick = () => {
+    
+}
 
 // timer and penalize time if there are wrong questions
 
