@@ -14,7 +14,7 @@
     <!-- Starting Page -->
     <section class="starting col text-center p-4">
         <h1>Whitney's Coding Quiz</h1>
-        <p>Try to answer the following code-related questions
+        <p class='hide'>Try to answer the following code-related questions
             within the time limit. Keep in mind that incorrect answers
             will penalize your timer by ten seconds!
         </p>
@@ -22,6 +22,14 @@
     </section>
     <!-- End of Starting Page -->
     <div class="nextBtn btn"></div>
+    <div class="questions" style= "display: none;">
+        <h1 id="question"></h1>
+        <button id='a1'></button>
+        <button id="a2"></button>
+        <button id="a3"></button>
+        <button id="a4"></button>
+    </div>
+    <div id="score"></div>
 
     <!-- End Page -->
     <section class="ending">
@@ -35,7 +43,7 @@
     <!-- End of End Page -->
 
     <!-- Javascript Links -->
-    <script src="assests/js/questions.js"></script>
+    <!--<script src="assests/js/questions.js"></script>-->
     <script src="assests/js/script.js"></script>
 </body>
 </html>
