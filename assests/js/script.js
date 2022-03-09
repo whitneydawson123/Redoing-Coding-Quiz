@@ -13,15 +13,28 @@ var a2 = document.getElementById('a2');
 var a3 = document.getElementById('a3');
 var a4 = document.getElementById('a4');
 var score = 0;
+var timeLeft = 60;
 
 // other variables
 let shuffleQuestions, currentQuestions
+
+// timer
+function timer(){
+    var sec = 60;
+    var timer = setInterval(function(){
+        document.getElementById('timer').innerHTML=`<h3>00:${sec}</h3>`;
+        sec--;
+        if (sec < 0) {
+            clearInterval(timer);
+        }
+    }, 1000);
+}
 
 // start button function
 startBtn.addEventListener('click', startGame);
 nextBtn.addEventListener('click', () => {
     currentQuestions++
-    nextQuestions()
+    nextQuestion();
 });
 
 function startGame() {
@@ -58,10 +71,7 @@ function answerSelection() {
     }
 }
 
-// timer and penalize time if there are wrong questions??
-function timer() {
-// get timer out the class repo
-};
+// timer and penalize time
 
 // end of game
 function endGame() {
