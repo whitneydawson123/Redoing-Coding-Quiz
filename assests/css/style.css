@@ -27,11 +27,11 @@
 /* Global Styles*/
 /* btn*/
 .btn {
+    padding: 10px;
     text-decoration-color: var(--clr-white);
     background-color: var(--clr-primary);
 }
 .btn a:hover {
     background-color:var(--clr-primary-light);
 }
-
 

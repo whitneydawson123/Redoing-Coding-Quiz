@@ -13,22 +13,49 @@ var a2 = document.getElementById('a2');
 var a3 = document.getElementById('a3');
 var a4 = document.getElementById('a4');
 var score = 0;
-var timeLeft = 60;
 
 // other variables
 let shuffleQuestions, currentQuestions
 
 // timer
-function timer(){
-    var sec = 60;
+//function timer(){
+//    var sec = 60;
+//    var timer = setInterval(function(){
+//        document.getElementById('timer').innerHTML=`<h3>00:${sec}</h3>`;
+//        sec--;
+//        if (sec < 0) {
+//            clearInterval(timer);
+//        }
+//    }, 1000);
+//};
+startBtn.addEventListener('click', function(timer){
+    var secs = 60;
     var timer = setInterval(function(){
-        document.getElementById('timer').innerHTML=`<h3>00:${sec}</h3>`;
-        sec--;
-        if (sec < 0) {
+        document.getElementById('timer').innerHTML=`<h3>00:${secs}<h3>`;
+        secs--;
+        if (secs < 0) {
+            clearInterval(timer);
+            endGame();
+        } else if (currentQuestions > codeQuestions.length) {
             clearInterval(timer);
         }
     }, 1000);
+});
+
+function clearInterval() {
+    timer.style.display = 'none';
 }
+
+// take ten secs off timer
+function timeDeduction() {
+    if(this.textContent === codeQuestions[currentQuestions].answer) {
+        console.log('same');
+    } else {
+        secs - 10;
+    }
+}
+
+console.log(timer);
 
 // start button function
 startBtn.addEventListener('click', startGame);
@@ -75,7 +102,8 @@ function answerSelection() {
 
 // end of game
 function endGame() {
-    console.log("Game Over")
+    clearInterval();
+    console.log("Game Over");
 };
 
 // questions
