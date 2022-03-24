@@ -28,8 +28,6 @@ THEN I can save my initials and score
 
 ## Mock-Up
 
-## Installation
-Put link in 
-
 
 ## Usage
+https://whitneydawson123.github.io/Redoing-Coding-Quiz/
